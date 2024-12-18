@@ -16,13 +16,13 @@ Sistema para gerenciar os pedidos vindos de serviços externos e consultas tambe
 ```
 
 2. Clone the repo
-   ```sh
-   git clone https://github.com/edivaldo100/gerenciador-de-pedidos.git
-   ```
+```sh
+git clone https://github.com/edivaldo100/gerenciador-de-pedidos.git
+```
 3. Acessar pasta
-   ```sh
-   cd gerenciador-de-pedidos
-   ```
+```sh
+cd gerenciador-de-pedidos
+```
 4. Start Registry - Eurika-server
 ```sh
 	cd /registry
@@ -52,22 +52,22 @@ isAlive chamando o Gateway: http://localhost:8080/
 
 Gravando um pedido
 ex: com curl
-   ```sh
-    curl --location 'http://localhost:8080' \
+```sh
+ curl --location 'http://localhost:8080' \
 --header 'Content-Type: application/json' \
 --data '{
-	"products":[
-		{
-			"name": "melão",
-			"price": 50
-		}
-	]
+ "products":[
+     {
+         "name": "melão",
+         "price": 50
+     }
+ ]
 }'
-   ```
+```
    
 Consultando um pedido
 ex: com curl
-   ```sh
+```sh
     curl --location 'http://localhost:8080/1' \
 --header 'Content-Type: application/json' 
 '
