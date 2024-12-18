@@ -66,3 +66,5 @@ ex: com curl
 --header 'Content-Type: application/json' 
 '
    ```
+### Arquitetura proposta   
+![](desenho.png)
