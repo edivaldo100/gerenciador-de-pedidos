@@ -9,30 +9,36 @@ Sistema para gerenciar os pedidos vindos de serviços externos e consultas tambe
 
 ### Instalação
 
-1. Clone the repo
+1. Start Banco de dados - docker-compose
+```sh
+	cd gerenciador-de-pedidos
+	docker-compose up
+```
+
+2. Clone the repo
    ```sh
    git clone https://github.com/edivaldo100/gerenciador-de-pedidos.git
    ```
-2. Acessar pasta
+3. Acessar pasta
    ```sh
    cd gerenciador-de-pedidos
    ```
-3. Start Registry - Eurika-server
+4. Start Registry - Eurika-server
 ```sh
 	cd /registry
 	mvn spring-boot:run
 ```
-4. Start Gateway - Eureka-client
+5. Start Gateway - Eureka-client
 ```sh
 	cd /gateway
 	mvn spring-boot:run
 ```
-4. Start RestApi - Eureka-client (Instancia 1 - 9090 porta default)
+6. Start RestApi - Eureka-client (Instancia 1 - 9090 porta default)
 ```sh
 	cd /restapi
 	mvn spring-boot:run
 ```
-4. Start RestApi - Eureka-client (Instancia 2 - 9091)
+7. Start RestApi - Eureka-client (Instancia 2 - 9091)
 ```sh
 	cd /restapi
 	mvn spring-boot:run -Dserver.port=9091
