@@ -1,0 +1,29 @@
+server:
+  port: 9090
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+  application:
+    name: restapi
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    password: postgres
+    username: postgres
+    hikari:
+      connection-timeout: 3000
+      idleTimeout: 600000
+      maxLifetime: 18000000
+      maximum-pool-size: 1000
+      minimum-idle: 5
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        #format_sql: true
+        ddl-auto: create
+    show-sql: true
+    generate-ddl: true
