@@ -11,7 +11,7 @@ public class IsAlive {
 
     @GetMapping("/**")
     public String isAlive() {
-        return "Hello World from: " + serverPort;
+        return "ON in port: " + serverPort;
     }
 
 }
